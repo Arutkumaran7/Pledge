@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Action Pledge</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Take the Pledge for Our Planet</h1>
+            <p>Individual actions add up to powerful collective impact. Commit to climate-positive habits today.</p>
+            <a href="#pledge-form" class="cta-button">Take the Pledge</a>
+        </div>
+    </section>
+
+    <section id="kpis">
+        <div class="container">
+            <h2>Our Community Impact</h2>
+            <div class="kpi-grid">
+                <div class="kpi-item">
+                    <h3>1,000,000</h3>
+                    <p>Target Pledges</p>
+                </div>
+                <div class="kpi-item">
+                    <h3 id="kpi-achieved">0</h3>
+                    <p>Achieved Pledges</p>
+                </div>
+                <div class="kpi-item">
+                    <h3 id="kpi-students">0</h3>
+                    <p>Students</p>
+                </div>
+                <div class="kpi-item">
+                    <h3 id="kpi-professionals">0</h3>
+                    <p>Professionals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why">
+        <div class="container">
+            <h2>Why Your Pledge Matters</h2>
+            <p>Every small change in our daily habits contributes to a larger, global movement. Your commitment inspires others and signals a demand for a sustainable future. Together, our individual actions create massive, positive change.</p>
+        </div>
+    </section>
+
+    <section id="pledge-form">
+        <div class="container">
+            <h2>Make Your Commitment</h2>
+            <form id="form">
+                <div class="form-group">
+                    <label for="name">Name (Required)</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email (Required)</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number (Required)</label>
+                    <input type="tel" id="mobile" required>
+                </div>
+                
+                <p class="privacy-note">
+                    <strong>Privacy Note:</strong> Mobile Number and Email are required for validation but never shown publicly. Data is used only for verification and engagement.
+                </p>
+
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state">
+                </div>
+
+                <div class="form-group">
+                    <label for="profile">Profile Type</label>
+                    <select id="profile">
+                        <option value="Other">Other</option>
+                        <option value="Student">Student</option>
+                        <option value="Working Professional">Working Professional</option>
+                    </select>
+                </div>
+
+                <fieldset class="commitments">
+                    <legend>Choose Your Commitments (3 Themes)</legend>
+                    <p>Select as many as you can!</p>
+                    
+                    <strong>Theme 1: Reduce Waste</strong>
+                    <label><input type="checkbox" name="commitment" value="c1"> Reduce single-use plastics.</label>
+                    <label><input type="checkbox" name="commitment" value="c2"> Compost food scraps.</label>
+                    <label><input type="checkbox" name="commitment" value="c3"> Repair instead of replace.</label>
+
+                    <strong>Theme 2: Conserve Energy</strong>
+                    <label><input type="checkbox" name="commitment" value="c4"> Use energy-efficient bulbs.</label>
+                    <label><input type="checkbox" name="commitment" value="c5"> Unplug unused electronics.</label>
+                    <label><input type="checkbox" name="commitment" value="c6"> Choose public transport or walk.</label>
+                    
+                    <strong>Theme 3: Be an Advocate</strong>
+                    <label><input type="checkbox" name="commitment" value="c7"> Talk to friends/family about climate.</label>
+                    <label><input type="checkbox" name="commitment" value="c8"> Support eco-friendly businesses.</label>
+                    <label><input type="checkbox" name="commitment" value="c9"> Learn more about conservation.</label>
+                </fieldset>
+
+                <button type="submit" class="cta-button">Pledge Now & Get Certificate</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="pledge-wall">
+        <div class="container">
+            <h2>Public Pledge Wall</h2>
+            <p>See who else is cool enough to care!</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pledge ID</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>State</th>
+                            <th>Profile</th>
+                            <th>⭐ Level</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pledge-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div id="certificate-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button id="close-modal" class="close-button">&times;</button>
+            <h2>Certificate of Commitment</h2>
+            <p>This certifies that</p>
+            <h3 id="certificate-name"></h3>
+            <p class="cool-statement">Is Cool Enough to Care!</p>
+            <div class="rating-hearts" id="certificate-rating">
+                </div>
+            <p>Thank you for your pledge to protect our planet.</p>
+        </div>
+    </div>
+
+</body>
+</html>

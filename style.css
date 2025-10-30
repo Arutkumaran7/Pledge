@@ -1,0 +1,253 @@
+:root {
+    --primary-color: #2a9d8f;
+    --secondary-color: #e9c46a;
+    --bg-color: #fefbf6;
+    --text-color: #264653;
+    --white: #ffffff;
+    --gray: #f4f4f4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--white);
+}
+
+/* 1. Hero Section */
+#hero {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+}
+#hero h1 {
+    color: var(--white);
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background-color 0.2s;
+    border: none;
+    cursor: pointer;
+}
+.cta-button:hover {
+    background-color: #f4a261;
+    transform: translateY(-2px);
+}
+
+/* 2. KPIs */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+.kpi-item {
+    background: var(--white);
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.kpi-item h3 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin: 0;
+}
+.kpi-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* 4. Form */
+#form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important for padding */
+}
+.privacy-note {
+    font-size: 0.9rem;
+    color: #555;
+    background-color: var(--gray);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.commitments {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.commitments legend {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.commitments label {
+    display: block;
+    margin: 5px 0;
+    font-weight: normal;
+}
+.commitments strong {
+    display: block;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+/* 6. Pledge Wall */
+.table-container {
+    overflow-x: auto; 
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+tbody tr:nth-child(even) {
+    background-color: var(--gray);
+}
+
+/* 5. Certificate Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.cool-statement {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+#certificate-name {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin: 0;
+}
+.rating-hearts {
+    font-size: 2rem;
+    color: #e74c3c; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+
+    .kpi-grid {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+@media (max-width: 480px) {
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+}
