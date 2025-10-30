@@ -5,7 +5,7 @@ This is a responsive, single-page microsite built for the "Climate Action Pledge
 The backend logic is simulated using a mock JSON data array within the JavaScript file, as per the project requirements.
 
 
-## ✨ Features
+## Features
 
 * **Hero Section:** A clear call-to-action that smoothly scrolls to the pledge form.
 * **Live KPIs:** Dynamically updating counters for "Achieved Pledges," "Students," and "Professionals."
@@ -16,13 +16,13 @@ The backend logic is simulated using a mock JSON data array within the JavaScrip
 * **Mock Backend:** Simulates a backend using a simple JavaScript array to store and retrieve data. No server is required.
 * **Fully Responsive:** A clean, mobile-first design that looks great on all devices.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **HTML5:** For the website structure and content.
 * **CSS3:** For all styling, layout (Flexbox/Grid), and responsiveness.
 * **JavaScript :** For all DOM manipulation, form handling, dynamic updates, and certificate generation.
 
-## 📋 Project Requirements Met
+## Project Requirements Met
 
 This project was built to satisfy the following challenge requirements:
 * [x] A responsive, single-page website.
